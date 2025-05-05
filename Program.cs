@@ -46,7 +46,7 @@ namespace Lab4
             foreach (string text in texts)
             {
                 byte[] hash = ComputeSha256Custom(text);
-                Console.WriteLine($"Tekst długości {text.Length} -> Hash: {hash.ToHex()}");
+                Console.WriteLine($"Tekst długości {text.Length} -> Hash: {hash.ToHexString()}");
             }
         }
 
@@ -61,8 +61,8 @@ namespace Lab4
 
             Console.WriteLine($"Oryginał: {original}");
             Console.WriteLine($"Zmodyfikowany: {flipped}");
-            Console.WriteLine($"Hash 1: {hash1.ToHex()}");
-            Console.WriteLine($"Hash 2: {hash2.ToHex()}");
+            Console.WriteLine($"Hash 1: {hash1.ToHexString()}");
+            Console.WriteLine($"Hash 2: {hash2.ToHexString()}");
             Console.WriteLine($"Odległość Hamminga: {HammingDistance(hash1, hash2)} bitów");
         }
 
@@ -72,8 +72,8 @@ namespace Lab4
             byte[] hash1 = ComputeSha256Custom("kot");
             byte[] hash2 = ComputeSha256Custom("pies");
 
-            Console.WriteLine($"Hash(kot):  {hash1.ToHex()}");
-            Console.WriteLine($"Hash(pies): {hash2.ToHex()}");
+            Console.WriteLine($"Hash(kot):  {hash1.ToHexString()}");
+            Console.WriteLine($"Hash(pies): {hash2.ToHexString()}");
             Console.WriteLine($"Odległość Hamminga: {HammingDistance(hash1, hash2)} bitów");
         }
 

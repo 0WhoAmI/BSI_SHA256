@@ -1,8 +1,8 @@
 ﻿namespace Lab4
 {
-    public static class ByteExtensions
+    public static class ByteArrayExtensions
     {
-        public static string ToHex(this byte[] bytes)
+        public static string ToHexString(this byte[] bytes)
         {
             return BitConverter.ToString(bytes).Replace("-", "");
         }
